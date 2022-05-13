@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { NativeBaseProvider, Box } from 'native-base';
-import ImageBgScreen from 'screens/ImageBgScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import Root from './src/navigation/Root';
+
 /* 
   TODO: Native base: Done
   TODO: babel plugin resolver: Done
-  TODO: React Navigation
+  TODO: React Navigation: Done
   TODO: Redux Toolkit
   TODO: Firebase
+  TODO: expo sqlite
   TODO: MAP
 */
 
@@ -20,12 +23,14 @@ const config = {
 
 export default function App() {
   return (
-    <NativeBaseProvider config={config}>
-      <StatusBar style="auto" />
-      <Box flex={1} bg="#fff">
-        <ImageBgScreen />
-      </Box>
-    </NativeBaseProvider>
+    <NavigationContainer>
+      <NativeBaseProvider config={config}>
+        <StatusBar style="auto" />
+        <Box flex={1} bg="#fff">
+          <Root />
+        </Box>
+      </NativeBaseProvider>
+    </NavigationContainer>
   );
 }
 

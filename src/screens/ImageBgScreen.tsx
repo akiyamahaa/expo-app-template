@@ -2,8 +2,9 @@ import { ImageBackground, StyleSheet, View } from 'react-native';
 import React from 'react';
 import { Box, Icon, Text } from 'native-base';
 import { Entypo } from '@native-base/icons';
-import ImgBgLayout from 'components/ImgBgLayout';
-import LinearBox from 'components/LinearBox';
+import ImgBgLayout from '../components/ImgBgLayout';
+import LinearBox from '../components/LinearBox';
+
 
 const ImageBgScreen = () => {
   return (
