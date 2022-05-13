@@ -1,23 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-/* TODO: React Navigation
-   TODO: Redux Toolkit
-   TODO: Firebase
-   TODO: MAP
-   TODO: babel plugin resolver
-   TODO: Native base
+import { StyleSheet } from 'react-native';
+import { NativeBaseProvider, Box } from 'native-base';
+import ImageBgScreen from 'screens/ImageBgScreen';
+/* 
+  TODO: Native base: Done
+  TODO: babel plugin resolver: Done
+  TODO: React Navigation
+  TODO: Redux Toolkit
+  TODO: Firebase
+  TODO: MAP
 */
+
+const config = {
+  dependencies: {
+    // For Expo projects (Bare or managed workflow)
+    'linear-gradient': require('expo-linear-gradient').LinearGradient,
+  },
+};
+
 export default function App() {
   return (
-    <View style={styles.container}>
+    <NativeBaseProvider config={config}>
       <StatusBar style="auto" />
-    </View>
+      <Box flex={1} bg="#fff">
+        <ImageBgScreen />
+      </Box>
+    </NativeBaseProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
+const styles = StyleSheet.create({});
