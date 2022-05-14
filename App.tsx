@@ -3,15 +3,16 @@ import { StyleSheet } from 'react-native';
 import { NativeBaseProvider, Box } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
 import Root from './src/navigation/Root';
+import CrudFirebase from './src/screens/CrudFirebase';
 
 /* 
   TODO: Native base: Done
-  TODO: babel plugin resolver: Done
   TODO: React Navigation: Done
-  TODO: Redux Toolkit
   TODO: Firebase
-  TODO: expo sqlite
+  TODO: Redux Toolkit
   TODO: MAP
+  TODO: expo sqlite(option)
+  TODO: babel plugin resolver
 */
 
 const config = {
@@ -27,7 +28,7 @@ export default function App() {
       <NativeBaseProvider config={config}>
         <StatusBar style="auto" />
         <Box flex={1} bg="#fff">
-          <Root />
+          <CrudFirebase />
         </Box>
       </NativeBaseProvider>
     </NavigationContainer>
