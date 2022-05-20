@@ -46,7 +46,7 @@ const CrudFirebase = (props: Props) => {
 
   useEffect(() => {
     getUsers();
-  });
+  }, []);
 
   return (
     <Box mt="10" alignItems={'center'}>
@@ -79,10 +79,12 @@ const CrudFirebase = (props: Props) => {
             <Text>Age:{user.age}</Text>
           </Box>
           <Box>
-            <Button onPress={() => updateUser(user.id, user.age)} m='2'>
+            <Button onPress={() => updateUser(user.id, user.age)} m="2">
               Update Age
             </Button>
-            <Button onPress={() => deleteUser(user.id)} m='2'>Delete User</Button>
+            <Button onPress={() => deleteUser(user.id)} m="2">
+              Delete User
+            </Button>
           </Box>
         </Box>
       ))}

@@ -1,16 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, StatusBar, SafeAreaView } from 'react-native';
 import { NativeBaseProvider, Box } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
-import Root from './src/navigation/Root';
-import CrudFirebase from './src/screens/CrudFirebase';
+import MapScreen from './src/screens/MapScreen';
 
 /* 
   TODO: Native base: Done
   TODO: React Navigation: Done
-  TODO: Firebase
-  TODO: Redux Toolkit
+  TODO: Firebase Basic: Done
+  TODO: Firebase Auth
   TODO: MAP
+  TODO: Redux Toolkit
   TODO: expo sqlite(option)
   TODO: babel plugin resolver
 */
@@ -26,13 +25,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider config={config}>
-        <StatusBar style="auto" />
-        <Box flex={1} bg="#fff">
-          <CrudFirebase />
-        </Box>
+        <SafeAreaView style={styles.container}>
+          <MapScreen />
+        </SafeAreaView>
       </NativeBaseProvider>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+});
