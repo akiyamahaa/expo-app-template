@@ -1,7 +1,7 @@
 import { StyleSheet, Platform, StatusBar, SafeAreaView } from 'react-native';
 import { NativeBaseProvider, Box } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
-import MapScreen from '@screens/MapScreen';
+import Root from '@navigation/Root';
 
 /*
   TODO: Native base: Done
@@ -26,7 +26,7 @@ export default function App() {
     <NavigationContainer>
       <NativeBaseProvider config={config}>
         <SafeAreaView style={styles.container}>
-          <MapScreen />
+          <Root />
         </SafeAreaView>
       </NativeBaseProvider>
     </NavigationContainer>

@@ -1,6 +1,6 @@
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import React, { ReactNode } from 'react';
-import { Box, Icon } from 'native-base';
+import { Box} from 'native-base';
 
 interface Props {
   children: ReactNode;
