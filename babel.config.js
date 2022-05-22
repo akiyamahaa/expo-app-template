@@ -6,9 +6,13 @@ module.exports = function (api) {
       [
         'module-resolver',
         {
-          root: ['./src'],
+          root: ['./'],
           alias: {
             '@native-base/icons': '@native-base/icons/lib',
+            "@components": "./src/components",
+            "@screens": "./src/screens",
+            "@navigation": "./src/navigation",
+            "@configs": "./src/configs",
           },
         },
       ],

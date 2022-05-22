@@ -24,7 +24,7 @@ const MapScreen = (props: Props) => {
             longitude: -122,
           }}
           title="Test Title"
-          description="This is test descrip"
+          description="This is test description"
         />
       </MapView>
     </Box>

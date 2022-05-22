@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-// import { collection, getDocs } from 'firebase/firestore';
+// import { collection, getDocs } from 'config/firestore';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCsrP4moxDa2ajv9m7Dfcisqk9PQ8MSoAg',
@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 
-// NOTE: Test firebase
+// NOTE: Test config
 // const getData = async () => {
 //   const querySnapshot = await getDocs(collection(db, 'orders'));
 //   const resultList = querySnapshot.docs.map((doc) => doc.data());

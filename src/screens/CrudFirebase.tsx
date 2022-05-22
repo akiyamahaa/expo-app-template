@@ -9,7 +9,7 @@ import {
   getDocs,
   updateDoc,
 } from 'firebase/firestore';
-import { db } from '../firebase/config';
+import { db } from '../config/firebase';
 import { Box, Button } from 'native-base';
 
 type Props = {};

@@ -1,17 +1,17 @@
 import { StyleSheet, Platform, StatusBar, SafeAreaView } from 'react-native';
 import { NativeBaseProvider, Box } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
-import MapScreen from './src/screens/MapScreen';
+import MapScreen from '@screens/MapScreen';
 
-/* 
+/*
   TODO: Native base: Done
   TODO: React Navigation: Done
   TODO: Firebase Basic: Done
   TODO: Firebase Auth
-  TODO: MAP
+  TODO: MAP: (22/05)
   TODO: Redux Toolkit
   TODO: expo sqlite(option)
-  TODO: babel plugin resolver
+  TODO: babel plugin resolver: Done
 */
 
 const config = {
